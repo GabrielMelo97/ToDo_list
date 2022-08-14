@@ -1,0 +1,184 @@
+.container{
+  max-width: 736px;
+  margin: auto;
+  padding: 20px 0;
+}
+
+@media (max-width: 768px){
+  .container{
+    max-width: 95%;
+  }
+}
+
+.taskBar{
+  display: grid;
+  grid-template-columns: 1fr 90px;
+  box-sizing: initial;
+  gap: 8px;
+  height: 52px;
+  margin-top: -50px;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 640px){
+  .taskBar{
+    grid-template-columns: 1fr;
+    margin-bottom: 100px;
+  }
+
+  .taskBar > input{
+    height: 52px;
+  }
+
+  .taskBar button{
+    width: 100% !important;
+  }
+}
+
+.taskBar > input{
+  background: var(--gray-500);
+  color: var(--gray-100);
+  border-radius: 8px;
+  border: 1px solid var(--gray-700);
+  padding: 0 16px;
+  box-sizing: initial;
+}
+
+.taskBar > input:focus-visible{
+  outline: var(--purple) solid 1px;
+}
+
+.taskBar button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 14px;
+  background: var(--blue-dark);
+  color: var(--gray-100);
+  border: 0;
+  border-radius: 8px;
+  height: 52px;
+  width: 96px;
+  padding: 16px;
+  gap: 8px;
+  cursor: pointer;
+  transition: 0.1s
+}
+
+.taskBar button[disabled]{
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.taskBar button:not(:disabled):hover{
+   background: var(--blue)
+}
+
+.legendTasks{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  font-size: 0.875rem;
+}
+
+.legendTasks span{
+  margin-left: 8px;
+  background-color: var(--gray-400);
+  color: var(--gray-200);
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.taskCreate{
+  color: var(--blue);
+}
+
+.taskCheck{
+  color: var(--purple);
+}
+
+.listTasks{
+  display: flex;
+  flex-direction: column;
+  gap:12px;
+}
+
+.listTasks li{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  background: var(--gray-500);
+  padding: 16px;
+  border-radius: 8px;
+  gap: 12px;
+  font-size: 14px;
+  border: 1px solid var(--gray-400)
+}
+
+.taskContainer{
+  display: flex;
+  align-items: flex-start;
+  color: var(--gray-100);
+  gap: 16px;
+}
+.taskContainer p{
+  transition: 0.7s;
+}
+
+.taskContainer button, .trashButton{
+  background: transparent;
+  border:0;
+}
+
+.checkTask{
+  cursor: pointer;
+  color: #4EA8DE;
+  transition: 0.1s;
+}
+
+.checkTask:hover{
+  color: #1E6F9F;
+}
+
+.trash{
+  color: var(--gray-300);
+  padding: 3px;
+  border-radius: 4px;
+  box-sizing: content-box;
+}
+
+.trash:hover{
+  color: var(--danger);
+  background: var(--gray-400);
+}
+
+.textChecked{
+  text-decoration: line-through;
+  color: var(--gray-300);
+  /* transition: 0.7s; */
+}
+
+.listEmpty img{
+  width: 56px
+}
+
+.listEmpty{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 64px 24px;
+  border-top: 1px solid var(--gray-400);
+  border-radius: 8px
+}
+
+.textEmpty p{
+  color: var(--gray-300);
+  line-height: 24px;
+}
+
+.textEmpty p:first-child{
+  font-weight: 700;
+}
