@@ -1,4 +1,4 @@
-<h1 align="center"> Todo List </h1>
+<h1 align="center"> ToDo List </h1>
 
 <p align="center">
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
